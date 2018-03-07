@@ -1,6 +1,6 @@
 {
     "manifest_version": 2,
-    "name": "PPUP",
+    "name": "PPOUT",
     "description": "ChromeExtension",
     "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self' https://www.youtube.com;",
     "version": "1.0.1",

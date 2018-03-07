@@ -3,7 +3,7 @@ chrome.browserAction.onClicked.addListener(function(tab){
     chrome.tabs.getSelected(null, function(tab) {
         var innnerText = youTubeEmbedURL(tab.url);
         //新しいwindowで開く.
-        popopWindow = window.open('','youtube','width=640,height=470,scrollbars=no');
+        popopWindow = window.open('','youtube','width=650,height=490,scrollbars=no');
         popopWindow.document.open();
         //html要素を追加する.
         popopWindow.document.write('<html  lang="ja"><head>');
@@ -23,7 +23,7 @@ var youTubeEmbedURL = (text) => {
                         // v = idのキー要素
                         var youTubeId = getParameterByName('v', url);
                         if(youTubeId == '') youTubeId = url.replace(/(?:http:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\/)?(.+)/g, '$1');
-                        text = text.replace(url, '<iframe width="620" height="450" src="http://www.youtube.com/embed/'+youTubeId+'" frameborder="0" allowfullscreen></iframe>');
+                        text = text.replace(url, '<iframe width="620" height="420" src="http://www.youtube.com/embed/'+youTubeId+'" frameborder="0" allowfullscreen></iframe>');
                 }
         }
         return text;
