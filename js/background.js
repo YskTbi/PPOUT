@@ -3,8 +3,8 @@ chrome.browserAction.onClicked.addListener(function(tab){
     chrome.tabs.getSelected(null, function(tab) {
         var innnerText = youTubeEmbedURL(tab.url);
         //新しいwindowで開く.
-        if(innerText == null){
-            var popoutWindow = window.open('','youtube','width=650,height=490,scrollbars=no');
+        if(!(innnerText === null)){
+            popoutWindow = window.open('','youtube','width=650,height=490,scrollbars=no');
             popoutWindow.document.open();
             //html要素を追加する.
             popoutWindow.document.write('<html lang="ja"><head>');
@@ -16,7 +16,7 @@ chrome.browserAction.onClicked.addListener(function(tab){
     });
 });
 
-//埋め込みURLを生成する.
+//埋め込みURLを生成する.bb
 var youTubeEmbedURL = (text) => {
     var URLs = pregMatchAll(/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig, text);
     for(var i = 0; i < URLs.length; i++) {

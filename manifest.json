@@ -3,7 +3,7 @@
     "name": "PPOUT",
     "description": "ChromeExtension",
     "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self' https://www.youtube.com;",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "icons" : {
         "16" : "./images/16px.png",
         "32" : "./images/32px.png",
@@ -19,6 +19,6 @@
         "default_icon": {
             "16":"./images/16px.png"
         },
-        "default_title": "PPUP"
+        "default_title": "PPOUT"
     }
 }
