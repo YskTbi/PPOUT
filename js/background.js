@@ -7,10 +7,12 @@ chrome.browserAction.onClicked.addListener(function(tab){
             popoutWindow = window.open('','youtube','width=650,height=490,scrollbars=no');
             popoutWindow.document.open();
             //html要素を追加する.
-            popoutWindow.document.write('<html lang="ja"><head>');
-            popoutWindow.document.write('<body>');
-            popoutWindow.document.write(innnerText);
-            popoutWindow.document.write('</body></html>');
+            setTimeout(function(){
+                popoutWindow.document.write('<html lang="ja"><head>');
+                popoutWindow.document.write('<body>');
+                popoutWindow.document.write(innnerText);
+                popoutWindow.document.write('</body></html>');
+            },1000);
             popoutWindow.document.close();
         }
     });
